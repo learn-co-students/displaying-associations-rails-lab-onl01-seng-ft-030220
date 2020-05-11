@@ -8,7 +8,7 @@ class ArtistsController < ApplicationController
 
   def show
     if !@artist
-      redirect_to artists_path
+      redirect_to @artists
     end
   end
 
@@ -40,7 +40,7 @@ class ArtistsController < ApplicationController
   def destroy
     @artist.destroy
     flash[:notice] = "Artist deleted."
-    redirect_to artists_path
+    redirect_to @artists
   end
 
   private

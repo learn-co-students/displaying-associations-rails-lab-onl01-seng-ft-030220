@@ -8,7 +8,7 @@ class SongsController < ApplicationController
 
   def show
     if !@song
-      redirect_to songs_path
+      redirect_to @songs
     end
   end
 
